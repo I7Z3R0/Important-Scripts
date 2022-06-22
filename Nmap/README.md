@@ -1,5 +1,12 @@
 # Script used to allign the nmap ports from the nmap scan results
 
+```bash
+Make sure to put this script in PATH
+
+mine is in /usr/local/bin/allign.py
+
+```
+
 ## Usage
 
       Usage : python3 script.py <file name>
