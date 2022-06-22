@@ -3,6 +3,8 @@
 ```bash
 Make sure to put this script in PATH
 
+sudo ln -s allign.py allign
+
 mine is in /usr/local/bin/allign.py
 
 ```
