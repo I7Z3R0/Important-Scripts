@@ -3,6 +3,7 @@
 
 ## Linking
 sudo cp ready.sh /usr/local/bin/
+
 sudo ln -s /usr/local/bin/ready.sh /usr/local/bin/ready
 
 ## working
