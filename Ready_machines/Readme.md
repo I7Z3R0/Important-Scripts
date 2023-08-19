@@ -8,5 +8,6 @@ sudo ln -s /usr/local/bin/ready.sh /usr/local/bin/ready
 
 ## working
 
-➜  kali ready\n
+➜  kali ready
+
 ➜  kali
