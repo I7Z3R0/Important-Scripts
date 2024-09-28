@@ -2,6 +2,7 @@
 
 import re
 import sys
+import subprocess
 
 
 def ports(nmap):
@@ -16,7 +17,11 @@ def ports(nmap):
                 else:
                 	continue
     column = column[1:]
-    print(column)
+    sys.stdout.write(column)
+    
+    # Copy the result to the clipboard using xclip, without newline at the end
+    subprocess.run(f"echo -n '{column}' | xclip -selection clipboard", shell=True, check=True)
+    print("\nThe list of ports has been copied to the clipboard.")
 
 if __name__ == '__main__':
     if len(sys.argv[1:]) < 1:
