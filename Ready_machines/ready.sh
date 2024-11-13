@@ -9,5 +9,5 @@ if [ ! -e notes.md ]; then
     echo -e "MY IP = $ip_tun0" >> notes.md
     echo -e "Target = $target_ip" >> notes.md
     echo -e "$target_ip" > /target/target
-    subl notes.md
+    subl $(pwd)
 fi
