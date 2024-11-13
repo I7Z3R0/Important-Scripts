@@ -3,9 +3,9 @@
 ```bash
 Make sure to put this script in PATH
 
-sudo ln -s allign.py allign
+➜  Documents mv allign.py ~/.local/bin/allign
+➜  Documents chmod +x ~/.local/bin/allign 
 
-mine is in /usr/local/bin/allign.py
 
 ```
 
